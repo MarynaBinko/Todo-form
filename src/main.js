@@ -34,6 +34,7 @@ function createMarkup(arr) {
     .join("");
 }
 
+
 async function handleSubmit(event) {
   event.preventDefault();
   const { todo } = event.currentTarget.elements;
