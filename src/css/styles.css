@@ -60,6 +60,7 @@ h1 {
    margin: 10px 0;
    background-color: #fff;
    padding: 8px 16px;
+   border-radius: 6px; 
 }
 
 .list-title {
