@@ -74,6 +74,7 @@ async function handleUpdate(event) {
       },
       body: JSON.stringify({ completed: event.target.checked }),
     });
+    event.target.checked = !event.target.checked; 
   } catch (error) {
     console.error("Failed to update task:", error.message);
   }

@@ -24,6 +24,11 @@
       "id": "f40e",
       "title": "Pay electricity bill",
       "completed": false
+    },
+    {
+      "id": "b148",
+      "title": "Buy dog food",
+      "completed": true
     }
   ]
 }
