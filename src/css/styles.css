@@ -71,7 +71,7 @@ h1 {
 
 .list-item {  
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
    margin: 10px 0;
 }
 
