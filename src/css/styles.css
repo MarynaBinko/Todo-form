@@ -45,7 +45,7 @@ h1 {
   line-height: 2;
   letter-spacing: 0.04em;
   margin-top: 20px;
-  color: #520505;
+  color: #ffffff;
 }
 
 .list{
@@ -58,6 +58,8 @@ h1 {
   justify-content: space-evenly;
   align-items: center;
    margin: 10px 0;
+   background-color: #fff;
+   padding: 8px 16px;
 }
 
 .list-title {
@@ -94,7 +96,7 @@ button {
   border-radius: 4px;
     border: 1px solid var(--WHITE, #520505);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);    
-    background-color: transparent;
+    background-color: white;
     padding: 8px 16px;
     font-size: 18px;
     line-height: 2;
@@ -106,7 +108,7 @@ button {
 .list-checkbox{
   height: 25px;
   width: 25px;
-  background-color: #2196F3; 
+  background-color: #4064f3; 
   border: 2px solid #2196F3; 
   border-radius: 3px; 
 }
@@ -132,7 +134,7 @@ button {
   margin: 0 auto; 
 
   background: #2e2f42;
-  padding: 188px 0 188px; 
+  padding-bottom: 50px; 
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(
@@ -144,10 +146,5 @@ button {
   max-width: 1440px;
   background-position: center;
   background-repeat: no-repeat;
-  margin: auto;
-
-
-
-
- 
+  margin: auto; 
 }
