@@ -6,11 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/todo-form/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "json-server --watch db.json",
+    "start": "concurrently \"npm run serve\" \"npm run dev\""
   },
   "devDependencies": {
-    "vite": "^4.5.2",
-    "glob": "^8.1.0"
+    "concurrently": "^8.2.2",
+    "glob": "^8.1.0",
+    "json-server": "^1.0.0-alpha.23",
+    "vite": "^4.5.2"
   },
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",

@@ -1,0 +1,29 @@
+{
+    "todos": [
+      {
+        "id": "940b",
+        "title": "Clean the house",
+        "completed": false
+      },
+      {
+        "id": "6ade",
+        "title": "Buy groceries",
+        "completed": false
+      },
+      {
+        "id": "d25a",
+        "title": "Go for a run",
+        "completed": false
+      },
+      {
+        "id": "08f9",
+        "title": "Clean house",
+        "completed": false
+      },
+      {
+        "id": "f40e",
+        "title": "Pay electricity bill",
+        "completed": false
+      }
+    ]
+  }
