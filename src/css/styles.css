@@ -25,6 +25,9 @@
 }
 
 .app {
+  display: flex;
+  justify-content: center;
+
   max-width: 360px;
   padding-left: 16px;
   padding-right: 16px;
@@ -34,18 +37,10 @@
 
 
 
-.wraper{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-}
 
 body {
   margin: 0;
-  /* min-width: 320px;
-  min-height: 100vh; */
-}
+ }
 
 ul {
   margin: 0;
@@ -55,8 +50,21 @@ ul {
 .wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   max-width: 360px;
+
+  
+  background: #2e2f42;
+  padding: 188px 0 188px; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../img/todo.jpg) center/cover no-repeat;
 }
 
 h1 {
@@ -118,7 +126,17 @@ button {
     letter-spacing: 0.04em;
     color: #090909;
 }
+
+
 .list-checkbox{
   height: 25px;
   width: 25px;
+  background-color: #2196F3; 
+  border: 2px solid #2196F3; 
+  border-radius: 3px; 
 }
+
+.list-checkbox:checked {
+  background-color: #2196F3; 
+}
+
