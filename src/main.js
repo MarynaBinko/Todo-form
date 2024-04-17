@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:3000/todos";
+// const BASE_URL = "http://localhost:3000/todos";
+const BASE_URL = "https://jsonplaceholder.typicode.com/todos";
 
 const form = document.querySelector(".todo-form");
 const container = document.querySelector(".list");
@@ -24,10 +25,11 @@ fetchData(BASE_URL)
 
 function createMarkup(arr) {
   return arr
+  .slice(0, 5)
     .map(({ id, title, completed }) => `
       <li data-id="${id}" class="list-item">
         <input type="checkbox" class="list-checkbox" ${completed && "checked"}>
-        <h2 class="list-title">${title}</h2>
+        <h2 class="list-title">${title.length > 15 ? title.slice(0, 15) + '...' : title}</h2>
         <button class="list-btn">X</button>
       </li>
     `)
@@ -38,10 +40,14 @@ function createMarkup(arr) {
 async function handleSubmit(event) {
   event.preventDefault();
   const { todo } = event.currentTarget.elements;
-
+  const newTaskTitle = todo.value.trim();
+  if (!newTaskTitle) {
+    alert("Please enter a task."); 
+    return;
+  }
   try {
     const newTask = { title: todo.value, completed: false };
-    await fetchData(BASE_URL, {
+    const response = await fetch(BASE_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -49,8 +55,11 @@ async function handleSubmit(event) {
       body: JSON.stringify(newTask),
     });
 
-    const todos = await fetchData(BASE_URL);
-    container.innerHTML = createMarkup(todos);
+    if (!response.ok) {
+      throw new Error("Failed to add task.");
+    }
+    const newTaskData = await response.json();
+    container.insertAdjacentHTML("beforeend", createMarkup([newTaskData]));
 
     form.reset();
   } catch (error) {
