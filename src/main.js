@@ -58,6 +58,7 @@ async function handleSubmit(event) {
     if (!response.ok) {
       throw new Error("Failed to add task.");
     }
+    
     const newTaskData = await response.json();
     container.insertAdjacentHTML("beforeend", createMarkup([newTaskData]));
 
