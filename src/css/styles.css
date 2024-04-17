@@ -99,9 +99,9 @@ button {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);    
     background-color: white;
     padding: 8px 16px;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.04em;
+    font-size: 20px;
+    line-height: 3;
+    letter-spacing: 0.06em;
     color: #090909;
 }
 
